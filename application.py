@@ -16,12 +16,9 @@ application.config['SECRET_KEY'] = 'jCOo4PAnmU6A0j2lpKeI-A'
 # os.environ['AWS_DEFAULT_REGION'] = "us-east-1"
 
 AWS_region = 'us-east-1'
-AWS_owner = 'iamadmin-general'
+
 
 dynamodb = boto3.resource('dynamodb', region_name=AWS_region)
-
-# app.config['SQLALCHEMY_DATABASE_URI'] =  "sqlite:///raffle.db"
-# db = SQLAlchemy(app)
 
 def create_raffles_table(dynamodb=None):
     dynamodb = boto3.resource('dynamodb', region_name=AWS_region)
